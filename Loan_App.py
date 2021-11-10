@@ -17,9 +17,9 @@ st.title('Interest rate subsidy')
 st.text('Check your eligiblity for availing interest rate subsidy') 
 df=pd.read_csv('Training Data.csv') 
 # The following lines create boxes in which user can enter data required to make prediction
-age=st.selectbox ("Age",range(20,80,1)) 
+age=st.selectbox ("Age",range(21,80,1)) 
 sex = st.radio("Select Gender: ", ('male', 'female')) 
-income=st.slider("Income",min_value=0,max_value=10000000,step=10000) 
+income=st.slider("Income",min_value=0,max_value=10000000,step=50000) 
 workex = st.selectbox('Work Experience',range(0,20,1)) 
 marital=st.radio('Marital Status',('Yes','No')) 
 own=st.selectbox('Ownership status',("not rented/not owned","rented","owned")) 
@@ -44,13 +44,13 @@ elif own=='not rented/notowned':
     o=1
 else:
     o=2
-if 0<income<100000:
+if 0<=income<=100000:
     inc=0
-elif 100000<income<500000:
+elif 100000<income<=500000:
     inc=1
-elif 500000<income<1000000:
+elif 500000<income<=1000000:
     inc=2
-elif 1000000<income<5000000:
+elif 1000000<income<=5000000:
     inc=3
 else:
     inc=4
