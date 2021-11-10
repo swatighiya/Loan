@@ -30,14 +30,14 @@ o=0
 a=0
 inc=0
 d=0
-if 0 < workex < 2: 
-    w = 1 
+if 0 < workex < 2:
+    w = 0 
 elif 2<workex<3:
-    w = 2
+    w = 1
 elif 3<workex<5:
-    w = 3
+    w = 2
 else:
-    w = 4
+    w = 3
 if own== 'rented':
     o=1
 else:
@@ -53,21 +53,20 @@ elif 1000000<income<5000000:
 else:
     inc=4
 if 21<age<30:
-    a=2
-elif 30<age<50:
-    a=3
-else:
     a=1
+elif 30<age<50:
+    a=2
+else:
+    a=0
 if default=='yes':
     d=-8
 else:
     d=0
 user_input = w+inc+a+o+d
 if st.button("Predict"):
-    if user_input > 8:
+    if user_input > 10:
         st.text('You are eligible for loans at subsidized interest rates')
     else:
-        st.text('You are eligible for loans at high interest rates')
-    
+        st.text('You are eligible for loans at high interest rates')    
     
     
