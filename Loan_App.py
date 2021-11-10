@@ -54,14 +54,14 @@ elif 1000000<income<=5000000:
     inc=3
 else:
     inc=4
-if 21<age<=30:
+if 21<=age<=30:
     a=1
 elif 30<age<=50:
     a=2
 else:
     a=0
 if default=='yes':
-    d=-6
+    d=-7
 else:
     d=0
 user_input = w+inc+a+o+d
