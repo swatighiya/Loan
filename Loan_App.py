@@ -30,7 +30,7 @@ o=0
 a=0
 inc=0
 d=0
-if 0 < workex <= 2:
+if 0<= workex <=2:
     w = 0 
 elif 2<workex<=3:
     w = 1
