@@ -40,7 +40,7 @@ else:
     w = 3
 if own== 'rented':
     o=0
-elif own=='not rented/notowned':
+elif own=='not rented/not owned':
     o=1
 else:
     o=2
