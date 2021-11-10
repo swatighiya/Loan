@@ -19,10 +19,10 @@ df=pd.read_csv('Training Data.csv')
 # The following lines create boxes in which user can enter data required to make prediction
 age=st.selectbox ("Age",range(20,80,1)) 
 sex = st.radio("Select Gender: ", ('male', 'female')) 
-income=st.slider("Income",min_value=10000,max_value=10000000,step=10000) 
+income=st.slider("Income",min_value=0,max_value=10000000,step=10000) 
 workex = st.selectbox('Work Experience',range(0,20,1)) 
 marital=st.radio('Marital Status',('Yes','No')) 
-own=st.selectbox('Ownership status',("rented","owned")) 
+own=st.selectbox('Ownership status',("not rented/not owned","rented","owned")) 
 default = st.radio("Have you ever defaulted in past: ", ('yes', 'no')) 
 # user input 
 w=0
@@ -39,6 +39,8 @@ elif 3<workex<5:
 else:
     w = 3
 if own== 'rented':
+    o=0
+elif own=='not rented/notowned':
     o=1
 else:
     o=2
@@ -71,5 +73,4 @@ if st.button("Predict"):
         st.text('You are eligible for loans at normal interest rates')    
     else:
         st.text('You are eligible for loans at high interest rates')
-    
     
