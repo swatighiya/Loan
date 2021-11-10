@@ -24,7 +24,7 @@ workex = st.selectbox('Work Experience',range(0,20,1))
 marital=st.radio('Marital Status',('Yes','No')) 
 own=st.selectbox('Ownership status',("not rented/not owned","rented","owned")) 
 default = st.radio("Have you ever defaulted in past: ", ('yes', 'no')) 
-# user input 
+# User input 
 w=0
 o=0
 a=0
