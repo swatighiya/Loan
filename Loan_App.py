@@ -63,10 +63,13 @@ if default=='yes':
 else:
     d=0
 user_input = w+inc+a+o+d
+st.text('Your score is: '+str(user_input)+' out of 11')
 if st.button("Predict"):
-    if user_input > 10:
+    if user_input > 8:
         st.text('You are eligible for loans at subsidized interest rates')
+    elif 6<=user_input<=8:
+        st.text('You are eligible for loans at normal interest rates')    
     else:
-        st.text('You are eligible for loans at high interest rates')    
+        st.text('You are eligible for loans at high interest rates')
     
     
