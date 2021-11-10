@@ -19,7 +19,7 @@ df=pd.read_csv('Training Data.csv')
 # The following lines create boxes in which user can enter data required to make prediction
 age=st.selectbox ("Age",range(21,80,1)) 
 sex = st.radio("Select Gender: ", ('male', 'female')) 
-income=st.slider("Income",min_value=0,max_value=10000000,step=50000) 
+income=st.slider("Income",min_value=0,max_value=10000000,step=10000) 
 workex = st.selectbox('Work Experience',range(0,20,1)) 
 marital=st.radio('Marital Status',('Yes','No')) 
 own=st.selectbox('Ownership status',("not rented/not owned","rented","owned")) 
