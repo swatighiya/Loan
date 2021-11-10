@@ -61,7 +61,7 @@ elif 30<age<50:
 else:
     a=0
 if default=='yes':
-    d=-8
+    d=-6
 else:
     d=0
 user_input = w+inc+a+o+d
