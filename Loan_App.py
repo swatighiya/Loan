@@ -30,11 +30,11 @@ o=0
 a=0
 inc=0
 d=0
-if 0 < workex < 2:
+if 0 < workex <= 2:
     w = 0 
-elif 2<workex<3:
+elif 2<workex<=3:
     w = 1
-elif 3<workex<5:
+elif 3<workex<=5:
     w = 2
 else:
     w = 3
@@ -54,9 +54,9 @@ elif 1000000<income<5000000:
     inc=3
 else:
     inc=4
-if 21<age<30:
+if 21<age<=30:
     a=1
-elif 30<age<50:
+elif 30<age<=50:
     a=2
 else:
     a=0
